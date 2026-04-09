@@ -1,9 +1,5 @@
 services:
-  - type: web
+  - type: static
     name: task-quest-app
-    runtime: static
     buildCommand: npm run build
     publishPath: dist
-    headers:
-      - key: Cache-Control
-        value: no-cache
