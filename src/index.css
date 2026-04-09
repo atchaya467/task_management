@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --accent-yellow: #FFEE00;
+  --accent-cyan: #00F0FF;
+  --accent-pink: #FF00F5;
+  --bg-main: #f0f0f0;
+  --text-main: #000000;
+  --border-width: 3px;
+  --hard-shadow: 6px 6px 0px 0px #000000;
+  --hard-shadow-sm: 3px 3px 0px 0px #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #f7f7f7;
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.tasks-container {
+  max-width: 650px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  box-shadow: var(--hard-shadow);
+  padding: 2.5rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: var(--accent-yellow);
+  border: var(--border-width) solid #000000;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  transform: rotate(-2deg);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: var(--border-width) solid #000000;
+  background: white;
+  box-shadow: var(--hard-shadow-sm);
+  outline: none;
+  transition: all 0.1s;
+}
+
+input[type="text"]:focus {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.btn-add {
+  background: var(--accent-cyan);
+  border: var(--border-width) solid #000000;
+  padding: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: var(--hard-shadow-sm);
+  transition: all 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-add:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.btn-add:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.category-pill {
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  font-weight: 700;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.1s;
+}
+
+.category-pill.active {
+  background: var(--accent-yellow);
+  box-shadow: 2px 2px 0px 0px #000;
+  transform: translate(-1px, -1px);
+}
+
+.task-item {
+  background: #ffffff;
+  border: 2px solid #000000;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--hard-shadow-sm);
+  transition: all 0.2s;
+}
+
+.task-item:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px 0px #000;
+}
+
+.task-item.completed {
+  background: #eee;
+  opacity: 0.8;
+}
+
+.task-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+.btn-delete {
+  background: var(--accent-pink);
+  border: 2px solid #000;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
+.btn-delete:active {
+  transform: translate(1px, 1px);
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+/* Custom Checkbox */
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s;
+}
+
+.checkbox.checked {
+  background: #000;
+  color: #fff;
+}
